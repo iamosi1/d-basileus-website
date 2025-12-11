@@ -3,405 +3,435 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D-BASILEUS PROPERTIES LTD: African Real Estate Leadership & Secured Investment</title>
-    <meta name="description" content="The leading technology-driven corporation transforming African real estate by guaranteeing secured legal titles and delivering superior ROI for our global network of partners across Africa.">
-    
+    <title>D-BASILEUS PROPERTIES LTD | African Real Estate Leadership</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'db-sand': '#F5F2EA',      // Background Neutral
-                        'db-gold': '#C5A065',      // Premium Accent (Crown/Key)
-                        'db-green': '#2C4A3B',     // Deep Brand Green (Logo Base)
-                        'db-dark': '#1A1A1A',      // Text
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Georgia', 'serif'], 
-                    }
-                }
-            }
-        }
-    </script>
-
     <style>
-       .icon { font-size: 2rem; color: #C5A065; }
-        html { scroll-behavior: smooth; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
         
+        /* Custom Tailwind Configuration */
+        :root {
+            --db-green: #2C4A3B; /* Deep Forest Green */
+            --db-gold: #C5A065;  /* Muted Gold */
+            --db-sand: #F5F2EA;  /* Warm Sand/Cream */
+            --db-dark: #1E332B;  /* Darker Green for text */
+        }
+
+        .db-green { color: var(--db-green); }
+        .bg-db-green { background-color: var(--db-green); }
+        .text-db-green { color: var(--db-green); }
+        .hover\:bg-db-green:hover { background-color: var(--db-green); }
+        .border-db-green { border-color: var(--db-green); }
+
+        .db-gold { color: var(--db-gold); }
+        .bg-db-gold { background-color: var(--db-gold); }
+        .text-db-gold { color: var(--db-gold); }
+        .hover\:bg-db-gold:hover { background-color: var(--db-gold); }
+        .border-db-gold { border-color: var(--db-gold); }
+
+        .db-sand { color: var(--db-sand); }
+        .bg-db-sand { background-color: var(--db-sand); }
+        .text-db-sand { color: var(--db-sand); }
+
+        .db-dark { color: var(--db-dark); }
+        .text-db-dark { color: var(--db-dark); }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--db-sand);
+        }
+        
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
         .hero-bg {
+            /* REPLACE THIS URL WITH YOUR ACTUAL HIGH-RES IMAGE URL */
+            background-image: url('https://imgur.com/BUFUgX5');
             background-size: cover;
             background-position: center;
+            min-height: 80vh; /* Responsive height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(30, 51, 43, 0.75); /* Darker overlay for text contrast */
         }
         .db-logo-icon {
-            /* Ensures the logo icon is visible and appropriately sized */
-            display: inline-block;
-            width: 3rem; /* Slightly larger */
-            height: 3rem; /* Slightly larger */
-            vertical-align: middle;
-            margin-right: 0.5rem;
+            width: 40px;
+            height: 40px;
+            margin-right: 8px;
+        }
+
+        /* Responsive Utility Classes for Layout */
+        @media (max-width: 768px) {
+            .hero-bg {
+                min-height: 60vh;
+            }
         }
     </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="bg-db-sand text-db-dark font-sans">
+<body class="text-db-dark">
 
     <!-- Header & Navigation -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-xl border-b-2 border-db-gold/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <!-- Brand Identity (Logo is now highly prominent) -->
-                <a href="#" class="flex items-center">
-                    <svg class="db-logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="none">
-                         <!-- Simplified B with Crown and Key - Emphasized Gold -->
-                        <path d="M 50 10 C 25 10 10 35 10 50 C 10 65 25 90 50 90 C 75 90 90 65 90 50 C 90 35 75 10 50 10 Z M 50 20 C 68 20 78 35 78 50 C 78 65 68 80 50 80 C 32 80 22 65 22 50 C 22 35 32 20 50 20 Z" fill="#2C4A3B"/>
-                        <!-- Key element (More distinct) -->
-                        <rect x="44" y="55" width="12" height="20" fill="#C5A065"/>
-                        <circle cx="50" cy="50" r="8" fill="#C5A065"/>
-                        <path d="M 48 50 L 52 50 L 52 58 L 48 58 Z" fill="#F5F2EA"/>
-                        <!-- Crown element (More distinct) -->
-                        <path d="M 30 20 L 70 20 L 65 30 L 50 15 L 35 30 Z" fill="#C5A065"/>
-                    </svg>
-                    <span class="font-serif text-3xl font-extrabold text-db-green tracking-tight transition-colors hover:text-db-dark">D-BASILEUS <span class="text-db-gold">PROPERTIES</span></span>
-                </a>
-                
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-6 text-db-dark font-medium">
-                    <a href="#about" class="hover:text-db-gold transition-colors">About</a>
-                    <a href="#metrics" class="hover:text-db-gold transition-colors">Trust</a>
-                    <a href="#projects" class="hover:text-db-gold transition-colors">Inventory</a>
-                    <a href="#management" class="hover:text-db-gold transition-colors">Leadership</a>
-                    <a href="#affiliates" class="hover:text-db-gold transition-colors">Network</a>
-                    <a href="#contact" class="px-6 py-2 bg-db-gold text-white font-bold rounded-full shadow-lg hover:bg-db-green transition-colors">Diaspora Investment</a>
-                </nav>
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            
+            <!-- Logo & Brand Name -->
+            <a href="#home" class="flex items-center">
+                <!-- START OF LOGO CODE - REPLACE WITH YOUR IMG TAG IF NEEDED -->
+                <svg class="db-logo-icon" xmlns="https://imgur.com/JvQajIl" viewBox="0 0 100 100" fill="none" stroke="none">
+                    <path d="M 50 10 C 25 10 10 35 10 50 C 10 65 25 90 50 90 C 75 90 90 65 90 50 C 90 35 75 10 50 10 Z M 50 20 C 68 20 78 35 78 50 C 78 65 68 80 50 80 C 32 80 22 65 22 50 C 22 35 32 20 50 20 Z" fill="#2C4A3B"/>
+                    <rect x="44" y="55" width="12" height="20" fill="#C5A065"/>
+                    <circle cx="50" cy="50" r="8" fill="#C5A065"/>
+                    <path d="M 48 50 L 52 50 L 52 58 L 48 58 Z" fill="#F5F2EA"/>
+                    <path d="M 30 20 L 70 20 L 65 30 L 50 15 L 35 30 Z" fill="#C5A065"/>
+                </svg>
+                <!-- END OF LOGO CODE -->
+                <span class="font-serif text-2xl sm:text-3xl font-extrabold text-db-green tracking-tight transition-colors hover:text-db-dark">
+                    D-BASILEUS <span class="text-db-gold">PROPERTIES</span>
+                </span>
+            </a>
+            
+            <!-- Navigation Links (Hidden on small screens) -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#about" class="text-db-dark hover:text-db-gold transition-colors font-medium">About Us</a>
+                <a href="#services" class="text-db-dark hover:text-db-gold transition-colors font-medium">Services</a>
+                <a href="#inventory" class="text-db-dark hover:text-db-gold transition-colors font-medium">Inventory</a>
+                <a href="#team" class="text-db-dark hover:text-db-gold transition-colors font-medium">Team</a>
+                <a href="#contact" class="text-db-dark hover:text-db-gold transition-colors font-medium">Contact</a>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-db-green text-3xl hover:text-db-gold transition-colors">☰</button>
-            </div>
-        </div>
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl">
-            <nav class="px-4 pt-2 pb-4 space-y-1">
-                <a href="#about" class="block px-3 py-2 rounded-lg text-base font-medium text-db-dark hover:bg-db-sand">About Us</a>
-                <a href="#metrics" class="block px-3 py-2 rounded-lg text-base font-medium text-db-dark hover:bg-db-sand">Trust & Metrics</a>
-                <a href="#projects" class="block px-3 py-2 rounded-lg text-base font-medium text-db-dark hover:bg-db-sand">Inventory</a>
-                <a href="#management" class="block px-3 py-2 rounded-lg text-base font-medium text-db-dark hover:bg-db-sand">Leadership</a>
-                <a href="#affiliates" class="block px-3 py-2 rounded-lg text-base font-medium text-db-dark hover:bg-db-sand">Affiliate Network</a>
-                <a href="#contact" class="block px-3 py-2 mt-2 rounded-lg text-base font-medium bg-db-gold text-white text-center hover:bg-db-green">Invest Now</a>
+                <!-- AFFILIATE PORTAL LINK (NEW) -->
+                <a href="[PASTE YOUR VERCEL AMS URL HERE]" target="_blank" class="px-4 py-2 bg-db-gold text-white font-bold rounded-lg shadow-md hover:bg-db-green transition-colors transform hover:scale-105">
+                    Affiliate Portal
+                </a>
             </nav>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-db-green text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <nav id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2 border-t border-gray-100">
+            <a href="#about" class="block text-db-dark hover:text-db-gold transition-colors font-medium rounded-md p-2">About Us</a>
+            <a href="#services" class="block text-db-dark hover:text-db-gold transition-colors font-medium rounded-md p-2">Services</a>
+            <a href="#inventory" class="block text-db-dark hover:text-db-gold transition-colors font-medium rounded-md p-2">Inventory</a>
+            <a href="#team" class="block text-db-dark hover:text-db-gold transition-colors font-medium rounded-md p-2">Team</a>
+            <a href="#contact" class="block text-db-dark hover:text-db-gold transition-colors font-medium rounded-md p-2">Contact</a>
+            
+            <!-- AFFILIATE PORTAL LINK (NEW) - Mobile -->
+            <a href="[PASTE YOUR VERCEL AMS URL HERE]" target="_blank" class="block text-center px-4 py-2 bg-db-gold text-white font-bold rounded-lg shadow-md hover:bg-db-green transition-colors mt-2">
+                Affiliate Portal
+            </a>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="relative overflow-hidden hero-bg py-24 md:py-36 text-white">
-        <!-- Dark Green Overlay -->
-        <div class="absolute inset-0 bg-db-green/85"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h1 class="font-serif text-5xl sm:text-7xl md:text-8xl font-black mb-4 leading-tight">
+    <!-- 1. Hero Section -->
+    <section id="home" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10 px-4">
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-black text-db-sand leading-tight mb-6 animate-fadeIn">
                 African Real Estate <span class="text-db-gold">Leadership</span>. Secured for the <span class="text-db-sand">Diaspora</span>.
             </h1>
-            <p class="text-xl md:text-2xl mb-10 max-w-4xl mx-auto text-db-sand opacity-90 font-light">
-                We guarantee **secured legal titles** and deliver superior ROI for our global network of investors, focused on **Building Wealth, Leading Networks, and Ensuring Stewardship.**
+            <p class="text-lg sm:text-xl text-white mb-10 max-w-3xl mx-auto">
+                D-BASILEUS PROPERTIES LTD provides ethical, legally verified land banking and development opportunities across Nigeria, built on trust and stewardship.
             </p>
-            <div class="flex justify-center flex-wrap gap-4">
-                <a href="#projects" class="px-10 py-4 text-xl font-bold bg-db-gold text-db-dark rounded-xl shadow-2xl hover:bg-db-sand transition-all duration-300 transform hover:scale-105">
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#inventory" class="px-8 py-3 bg-db-gold text-db-dark font-extrabold rounded-full shadow-lg transition duration-300 hover:bg-db-green hover:text-white transform hover:scale-105">
                     View Secured Inventory
                 </a>
-                <a href="#contact" class="px-10 py-4 text-xl font-bold bg-db-dark border-2 border-db-gold rounded-xl shadow-2xl hover:bg-db-gold hover:text-db-dark transition-all duration-300 transform hover:scale-105">
-                    Schedule Consultation
+                <a href="#contact" class="px-8 py-3 bg-transparent border-2 border-white text-white font-bold rounded-full shadow-lg transition duration-300 hover:bg-white hover:text-db-dark transform hover:scale-105">
+                    Speak to an Advisor
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Trust & Metrics Section -->
-    <section id="metrics" class="py-16 bg-white border-b border-db-gold/20">
+    <!-- 2. About Us / Mission & Values -->
+    <section id="about" class="py-16 sm:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="sr-only">Trust Metrics</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="p-4 border-r md:border-r-2 border-db-sand/80">
-                    <p class="text-4xl sm:text-5xl font-extrabold text-db-green">100%</p>
-                    <p class="text-md text-db-gold font-semibold mt-1">Secured Titles Guaranteed</p>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-bold text-db-green mb-3">Our Foundation: L.E.A.D.S. Philosophy</h2>
+                <p class="text-xl text-gray-600">Leadership, Ethics, Affiliate Focus, Delivery, Stewardship.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-center">
+                <!-- Value Card 1: LEADERSHIP -->
+                <div class="p-6 rounded-xl shadow-lg border-t-4 border-db-gold bg-db-sand transition duration-300 hover:shadow-2xl">
+                    <i class="fas fa-crown text-3xl text-db-gold mb-3"></i>
+                    <h3 class="text-xl font-bold text-db-dark mb-2">Leadership</h3>
+                    <p class="text-gray-700 text-sm">Setting the highest standards in ethical practice and project execution in the African market.</p>
                 </div>
-                <div class="p-4 border-r md:border-r-2 border-db-sand/80">
-                    <p class="text-4xl sm:text-5xl font-extrabold text-db-green">45%<span class="text-xl">+</span></p>
-                    <p class="text-md text-db-gold font-semibold mt-1">Avg. Projected ROI</p>
+                <!-- Value Card 2: ETHICS -->
+                <div class="p-6 rounded-xl shadow-lg border-t-4 border-db-gold bg-db-sand transition duration-300 hover:shadow-2xl">
+                    <i class="fas fa-handshake text-3xl text-db-gold mb-3"></i>
+                    <h3 class="text-xl font-bold text-db-dark mb-2">Ethics</h3>
+                    <p class="text-gray-700 text-sm">Zero tolerance for land fraud. Every property is legally verified and guaranteed by D-BASILEUS.</p>
                 </div>
-                <div class="p-4 border-r md:border-r-2 border-db-sand/80">
-                    <p class="text-4xl sm:text-5xl font-extrabold text-db-green">3,000<span class="text-xl">+</span></p>
-                    <p class="text-md text-db-gold font-semibold mt-1">Diaspora Investors Served</p>
+                <!-- Value Card 3: AFFILIATE FOCUS -->
+                <div class="p-6 rounded-xl shadow-lg border-t-4 border-db-gold bg-db-sand transition duration-300 hover:shadow-2xl">
+                    <i class="fas fa-users-gear text-3xl text-db-gold mb-3"></i>
+                    <h3 class="text-xl font-bold text-db-dark mb-2">Affiliate Focus</h3>
+                    <p class="text-gray-700 text-sm">Empowering our network with world-class training and a transparent, rewarding commission structure.</p>
                 </div>
-                <div class="p-4">
-                    <p class="text-4xl sm:text-5xl font-extrabold text-db-green">3</p>
-                    <p class="text-md text-db-gold font-semibold mt-1">Major Development Hubs</p>
+                 <!-- Value Card 4: DELIVERY -->
+                <div class="p-6 rounded-xl shadow-lg border-t-4 border-db-gold bg-db-sand transition duration-300 hover:shadow-2xl">
+                    <i class="fas fa-truck-fast text-3xl text-db-gold mb-3"></i>
+                    <h3 class="text-xl font-bold text-db-dark mb-2">Delivery</h3>
+                    <p class="text-gray-700 text-sm">Commitment to delivering tangible assets and projected returns on schedule and specification.</p>
+                </div>
+                 <!-- Value Card 5: STEWARDSHIP -->
+                <div class="p-6 rounded-xl shadow-lg border-t-4 border-db-gold bg-db-sand transition duration-300 hover:shadow-2xl">
+                    <i class="fas fa-shield-halved text-3xl text-db-gold mb-3"></i>
+                    <h3 class="text-xl font-bold text-db-dark mb-2">Stewardship</h3>
+                    <p class="text-gray-700 text-sm">Managing client assets with integrity, ensuring long-term wealth preservation for families.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Us / Vision & Mission -->
-    <section id="about" class="py-24 bg-db-sand border-b border-db-gold/20">
+    <!-- 3. Core Services -->
+    <section id="services" class="py-16 sm:py-24 bg-db-sand">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-db-green">Our Mandate: Leadership in African Real Estate</h2>
-                <p class="text-xl text-db-gold mt-2">Vision. Ethics. Execution. **The D-BASILEUS Difference.**</p>
-            </div>
+            <h2 class="text-4xl font-serif font-bold text-db-green text-center mb-12">Comprehensive Real Estate Services</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-                <!-- Vision -->
-                <div class="p-6 rounded-xl bg-white shadow-xl border-t-4 border-db-green h-full">
-                    <h3 class="text-2xl font-serif font-extrabold text-db-green mb-3 flex items-center gap-2">
-                        <span class="text-db-gold text-3xl">👁️</span> Global Vision
-                    </h3>
-                    <p class="text-gray-700">
-                        To be the leading global real estate investment and development corporation recognized for its ethical practices, rapid asset growth, and empowering affiliate network, setting the benchmark for wealth creation in the African diaspora market.
-                    </p>
-                </div>
-
-                <!-- Mission -->
-                <div class="p-6 rounded-xl bg-white shadow-xl border-t-4 border-db-green h-full">
-                    <h3 class="text-2xl font-serif font-extrabold text-db-green mb-3 flex items-center gap-2">
-                        <span class="text-db-gold text-3xl">🔑</span> Core Mission
-                    </h3>
-                    <p class="text-gray-700">
-                        To secure, develop, and market prime real estate assets with undeniable legal documentation, providing a robust, transparent, and highly profitable investment platform that transforms clients into empowered partners.
-                    </p>
-                </div>
-
-                <!-- Legal Focus -->
-                <div class="p-6 rounded-xl bg-white shadow-xl border-t-4 border-db-green h-full">
-                    <h3 class="text-2xl font-serif font-extrabold text-db-green mb-3 flex items-center gap-2">
-                        <span class="text-db-gold text-3xl">📜</span> Legal Assurance
-                    </h3>
-                    <p class="text-gray-700">
-                        We guarantee verified and legally secured titles (C of O, Governor's Consent, or Gazette) **prior to sale**. This ethical mandate is the fundamental difference, minimizing investor risk for Diaspora clients.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Inventory / Featured Projects -->
-    <section id="projects" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-serif text-center font-bold text-db-green mb-4">Secured Investment Inventory & Portfolio</h2>
-            <p class="text-xl text-center text-db-dark mb-12 max-w-3xl mx-auto">
-                Showcasing the scale of our development and the guaranteed security of our assets—from land banking to commercial crown jewels.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 
-                <!-- Project 1: Lekki Golden Crown Mall -->
-                <div class="bg-db-sand rounded-xl shadow-2xl overflow-hidden group border-t-8 border-db-gold">
+                <!-- Service Block 1: The Secured Land Bank -->
+                <div class="bg-white p-8 rounded-xl shadow-2xl transition duration-300 hover:shadow-db-green/50 hover:scale-[1.01] border-l-8 border-db-green">
+                    <i class="fas fa-warehouse text-4xl text-db-gold mb-4"></i>
+                    <h3 class="text-2xl font-bold text-db-dark mb-3">The Secured Land Bank & Development</h3>
+                    <p class="text-gray-700 mb-4">
+                        Our core offering: acquisition of undervalued, legally verified land and its transformation into developed commercial and residential buildings. We handle the complete lifecycle, offering turnkey investment opportunities for high ROI.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                        <li>Legal Due Diligence (Guaranteed by D-BASILEUS)</li>
+                        <li>High-Value Property Development</li>
+                        <li>Acquisition for Long-Term Rental Income Generation</li>
+                    </ul>
+                </div>
+
+                <!-- Service Block 2: Property Management & Leasing -->
+                <div class="bg-white p-8 rounded-xl shadow-2xl transition duration-300 hover:shadow-db-green/50 hover:scale-[1.01] border-l-8 border-db-green">
+                    <i class="fas fa-house-chimney-user text-4xl text-db-gold mb-4"></i>
+                    <h3 class="text-2xl font-bold text-db-dark mb-3">Property Management & Leasing</h3>
+                    <p class="text-gray-700 mb-4">
+                        We offer a truly hands-off investment experience, vital for our Diaspora clients. Our full-spectrum management ensures assets maintain value and generate recurring revenue efficiently.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                        <li>Tenant/Lease Management and Rent Collection</li>
+                        <li>Routine Maintenance and Security Coordination</li>
+                        <li>Facility Management for Commercial Complexes</li>
+                    </ul>
+                </div>
+                
+                <!-- Affiliate Training & Support -->
+                <div class="bg-white p-8 rounded-xl shadow-2xl transition duration-300 hover:shadow-db-green/50 hover:scale-[1.01] border-l-8 border-db-green lg:col-span-2">
+                    <i class="fas fa-graduation-cap text-4xl text-db-gold mb-4"></i>
+                    <h3 class="text-2xl font-bold text-db-dark mb-3">Affiliate Training & Support (Access Your AMS)</h3>
+                    <p class="text-gray-700 mb-4">
+                        We empower our network with dedicated online tools, mentorship, and resources to ensure success and ethical compliance. Use the portal below to register, track sales, and view your commission ledger.
+                    </p>
+                    <a href="[PASTE YOUR VERCEL AMS URL HERE]" target="_blank" class="inline-flex items-center px-6 py-3 bg-db-gold text-db-dark font-extrabold rounded-lg shadow-md transition duration-300 hover:bg-db-green hover:text-white transform hover:scale-105">
+                        <i class="fas fa-chart-line mr-2"></i> Access Affiliate Management System (AMS)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Inventory / Featured Projects -->
+    <section id="inventory" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-serif font-bold text-db-green text-center mb-12">Featured Secured Inventory</h2>
+            <p class="text-center text-xl text-gray-600 mb-10">Exclusive opportunities for high-yield investment.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Project Card 1 -->
+                <div class="group bg-db-sand rounded-xl shadow-xl overflow-hidden transition duration-300 hover:shadow-db-gold/50">
                     <img src="https://placehold.co/600x400/C5A065/FFFFFF?text=Lekki+Golden+Crown+Mall+Mockup" alt="Lekki Golden Crown Mall" class="w-full h-56 object-cover transition duration-300 group-hover:scale-105">
                     <div class="p-6">
-                        <h3 class="text-2xl font-serif font-bold text-db-green">Lekki Golden Crown Mall (Lagos)</h3>
-                        <p class="text-sm text-db-gold font-semibold mb-3">Flagship Commercial Development. Status: <span class="text-db-green font-bold">Under Construction</span></p>
-                        <p class="text-gray-700 text-sm">A major commercial hub leveraging prime Lagos location. Investment opportunities available for commercial spaces and equity partners.</p>
-                        <a href="#contact" class="mt-4 inline-block text-db-gold font-bold hover:text-db-green transition-colors border-b border-db-gold hover:border-db-green">Inquire About Equity →</a>
+                        <h3 class="text-2xl font-serif font-bold text-db-dark mb-2">Lekki Golden Crown Mall</h3>
+                        <p class="text-db-green font-semibold mb-3">Commercial Development - Lagos</p>
+                        <p class="text-gray-700 text-sm">A prime retail and office complex offering high rental yields in a rapidly expanding commercial hub.</p>
+                        <a href="#contact" class="mt-4 inline-block text-db-gold font-bold hover:text-db-green transition-colors">
+                            Inquire Now <i class="fas fa-arrow-right text-xs ml-1"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 2: The Monarch Land Series -->
-                <div class="bg-db-sand rounded-xl shadow-2xl overflow-hidden group border-t-8 border-db-gold">
-                    <img src="https://placehold.co/600x400/2C4A3B/F5F2EA?text=Monarch+Land+Bank+Plot+Layout" alt="The Monarch Land Series" class="w-full h-56 object-cover transition duration-300 group-hover:scale-105">
+                <!-- Project Card 2 -->
+                <div class="group bg-db-sand rounded-xl shadow-xl overflow-hidden transition duration-300 hover:shadow-db-gold/50">
+                    <img src="https://placehold.co/600x400/2C4A3B/F5F2EA?text=Monarch+Land+Series+I+Plot" alt="Monarch Land Series I" class="w-full h-56 object-cover transition duration-300 group-hover:scale-105">
                     <div class="p-6">
-                        <h3 class="text-2xl font-serif font-bold text-db-green">Monarch Land Series (Ogun/Ibeju-Lekki)</h3>
-                        <p class="text-sm text-db-gold font-semibold mb-3">Secured Land Banking - **Governor's Consent**</p>
-                        <p class="text-gray-700 text-sm">Strategic residential and commercial land plots with guaranteed titles, providing 35%-60% projected ROI. **High Demand.**</p>
-                        <a href="#contact" class="mt-4 inline-block text-db-gold font-bold hover:text-db-green transition-colors border-b border-db-gold hover:border-db-green">Explore Available Plots →</a>
+                        <h3 class="text-2xl font-serif font-bold text-db-dark mb-2">Monarch Land Series I</h3>
+                        <p class="text-db-green font-semibold mb-3">Residential Land Banking - Abuja</p>
+                        <p class="text-gray-700 text-sm">Secured, titled plots in high-growth residential corridors, perfect for long-term appreciation and future development.</p>
+                         <a href="#contact" class="mt-4 inline-block text-db-gold font-bold hover:text-db-green transition-colors">
+                            Inquire Now <i class="fas fa-arrow-right text-xs ml-1"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 3: Proposed Benin Edo State Dev. -->
-                <div class="bg-db-sand rounded-xl shadow-2xl overflow-hidden group border-t-8 border-db-gold">
-                    <img src="https://placehold.co/600x400/1A1A1A/C5A065?text=Benin+City+Urban+Masterplan+Mockup" alt="Proposed Edo State Development" class="w-full h-56 object-cover transition duration-300 group-hover:scale-105">
+                <!-- Project Card 3 -->
+                <div class="group bg-db-sand rounded-xl shadow-xl overflow-hidden transition duration-300 hover:shadow-db-gold/50">
+                    <img src="https://placehold.co/600x400/C5A065/2C4A3B?text=Edo+City+Development+Rendering" alt="Edo City Development" class="w-full h-56 object-cover transition duration-300 group-hover:scale-105">
                     <div class="p-6">
-                        <h3 class="text-2xl font-serif font-bold text-db-green">Edo City Master Development (Benin)</h3>
-                        <p class="text-sm text-db-gold font-semibold mb-3">Future High-Growth Corridor Investment. Status: <span class="text-db-green font-bold">Land Acquisition</span></p>
-                        <p class="text-gray-700 text-sm">Upcoming large-scale, mixed-use development to drive regional growth. Early-stage institutional investment opportunities available.</p>
-                        <a href="#contact" class="mt-4 inline-block text-db-gold font-bold hover:text-db-green transition-colors border-b border-db-gold hover:border-db-green">Register for Updates →</a>
+                        <h3 class="text-2xl font-serif font-bold text-db-dark mb-2">Edo City Development</h3>
+                        <p class="text-db-green font-semibold mb-3">Mixed-Use Estate - Edo State</p>
+                        <p class="text-gray-700 text-sm">A fully managed estate offering a mix of luxury homes and essential community amenities for modern living.</p>
+                         <a href="#contact" class="mt-4 inline-block text-db-gold font-bold hover:text-db-green transition-colors">
+                            Inquire Now <i class="fas fa-arrow-right text-xs ml-1"></i>
+                        </a>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
-
-    <!-- Services & Offerings (Updated with Tech focus) -->
-    <section id="offerings" class="py-24 bg-db-green text-white">
+    
+    <!-- 5. Management Team -->
+    <section id="team" class="py-16 sm:py-24 bg-db-sand">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-serif text-center font-bold text-db-gold mb-4">Value-Added Services & Technology</h2>
-            <p class="text-xl text-center text-db-sand mb-12 max-w-3xl mx-auto">
-                Comprehensive solutions incorporating the complete property ownership lifecycle, underpinned by proprietary technology.
-            </p>
+            <h2 class="text-4xl font-serif font-bold text-db-green text-center mb-12">Leadership and Stewardship</h2>
+            <p class="text-center text-xl text-gray-600 mb-10">Our team is committed to the L.E.A.D.S. philosophy.</p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <div class="p-6 bg-db-dark/50 rounded-xl shadow-lg border-b-4 border-db-gold text-center h-full">
-                    <div class="icon">💻</div>
-                    <h3 class="text-xl font-bold mt-4 text-db-gold">Digital Asset Platform</h3>
-                    <p class="text-sm text-db-sand mt-2">
-                        Proprietary tech dashboard for investors to view real-time asset performance, legal documents, and management reports securely.
-                    </p>
-                </div>
-                
-                <div class="p-6 bg-db-dark/50 rounded-xl shadow-lg border-b-4 border-db-gold text-center h-full">
-                    <div class="icon">🏠</div>
-                    <h3 class="text-xl font-bold mt-4 text-db-gold">Property Management</h3>
-                    <p class="text-sm text-db-sand mt-2">
-                        Full-spectrum management (tenanting, maintenance, rent collection) ensuring a **truly hands-off experience for Diaspora clients.**
-                    </p>
-                </div>
-                
-                <div class="p-6 bg-db-dark/50 rounded-xl shadow-lg border-b-4 border-db-gold text-center h-full">
-                    <div class="icon">⚖️</div>
-                    <h3 class="text-xl font-bold mt-4 text-db-gold">Legal Due Diligence</h3>
-                    <p class="text-sm text-db-sand mt-2">
-                        Our internal legal team ensures and guarantees verified titles for every transaction, eliminating investor risk.
-                    </p>
-                </div>
-
-                <div class="p-6 bg-db-dark/50 rounded-xl shadow-lg border-b-4 border-db-gold text-center h-full">
-                    <div class="icon">🤝</div>
-                    <h3 class="text-xl font-bold mt-4 text-db-gold">Affiliate Mentorship</h3>
-                    <p class="text-sm text-db-sand mt-2">
-                        Dedicated mentorship and resources for partners to scale their wealth network ethically and effectively.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Management Team (Leadership) -->
-    <section id="management" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-serif text-center font-bold text-db-green mb-4">Our Key Management & Stewardship</h2>
-            <p class="text-xl text-center text-db-dark mb-12 max-w-3xl mx-auto">
-                Guided by seasoned professionals and anchored in the L.E.A.D.S. philosophy, our leadership ensures ethical governance and accelerated growth.
-            </p>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <!-- KMP 1 -->
-                <div class="bg-db-sand p-6 rounded-xl shadow-xl text-center border-t-4 border-db-green">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <!-- Team Member 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-db-green/50 transition duration-300">
                     <img src="https://placehold.co/150x150/2C4A3B/C5A065?text=Founder" alt="Founder Placeholder" class="rounded-full mx-auto mb-4 border-4 border-db-gold">
-                    <h3 class="font-bold text-db-green text-lg">Dr. O. Basileus</h3>
-                    <p class="text-db-gold text-sm font-semibold">Founder & Chief Visionary Officer</p>
-                    <p class="text-xs text-gray-700 mt-2">Global Strategy & Ethical Mandate.</p>
+                    <h3 class="text-xl font-bold text-db-dark">Dr. O. Basileus</h3>
+                    <p class="text-db-gold font-medium">Founder & Chief Visionary Officer</p>
+                    <p class="text-gray-600 text-sm mt-2">Specializing in legal verification and high-yield acquisition strategy.</p>
                 </div>
-                <!-- KMP 2 -->
-                <div class="bg-db-sand p-6 rounded-xl shadow-xl text-center border-t-4 border-db-green">
+
+                 <!-- Team Member 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-db-green/50 transition duration-300">
+                    <img src="https://placehold.co/150x150/2C4A3B/C5A065?text=CFO" alt="CFO Placeholder" class="rounded-full mx-auto mb-4 border-4 border-db-gold">
+                    <h3 class="text-xl font-bold text-db-dark">Ms. F. Amadi</h3>
+                    <p class="text-db-gold font-medium">Chief Financial Officer</p>
+                    <p class="text-gray-600 text-sm mt-2">Manages capital allocation and ensures financial transparency and compliance.</p>
+                </div>
+                
+                 <!-- Team Member 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-db-green/50 transition duration-300">
                     <img src="https://placehold.co/150x150/2C4A3B/C5A065?text=COO" alt="COO Placeholder" class="rounded-full mx-auto mb-4 border-4 border-db-gold">
-                    <h3 class="font-bold text-db-green text-lg">Ms. A. Adekunle</h3>
-                    <p class="text-db-gold text-sm font-semibold">Chief Operations Officer (COO)</p>
-                    <p class="text-xs text-gray-700 mt-2">Project Execution & Client Delivery.</p>
+                    <h3 class="text-xl font-bold text-db-dark">Mr. K. Okoro</h3>
+                    <p class="text-db-gold font-medium">Chief Operating Officer</p>
+                    <p class="text-gray-600 text-sm mt-2">Oversees all property management, maintenance, and facility service delivery.</p>
                 </div>
-                <!-- KMP 3 -->
-                <div class="bg-db-sand p-6 rounded-xl shadow-xl text-center border-t-4 border-db-green">
-                    <img src="https://placehold.co/150x150/2C4A3B/C5A065?text=Legal" alt="Legal Director Placeholder" class="rounded-full mx-auto mb-4 border-4 border-db-gold">
-                    <h3 class="font-bold text-db-green text-lg">Barr. J. Olajide</h3>
-                    <p class="text-db-gold text-sm font-semibold">Director of Legal Assurance</p>
-                    <p class="text-xs text-gray-700 mt-2">Title Verification & Compliance.</p>
+                
+                 <!-- Team Member 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-db-green/50 transition duration-300">
+                    <img src="https://placehold.co/150x150/2C4A3B/C5A065?text=Sales" alt="Sales Director Placeholder" class="rounded-full mx-auto mb-4 border-4 border-db-gold">
+                    <h3 class="text-xl font-bold text-db-dark">Ms. B. Adekunle</h3>
+                    <p class="text-db-gold font-medium">Director of Affiliate Success</p>
+                    <p class="text-gray-600 text-sm mt-2">Dedicated to training and supporting our global network of affiliate partners.</p>
                 </div>
-                <!-- KMP 4 -->
-                <div class="bg-db-sand p-6 rounded-xl shadow-xl text-center border-t-4 border-db-green">
-                    <img src="https://placehold.co/150x150/2C4A3B/C5A065?text=Network" alt="Network Director Placeholder" class="rounded-full mx-auto mb-4 border-4 border-db-gold">
-                    <h3 class="font-bold text-db-green text-lg">Mr. C. Uzor</h3>
-                    <p class="text-db-gold text-sm font-semibold">Director of Affiliate Focus</p>
-                    <p class="text-xs text-gray-700 mt-2">Network Growth & Ethical Training.</p>
-                </div>
-            </div>
-            <div class="text-center mt-10">
-                <button class="px-8 py-3 bg-db-green text-white font-bold rounded-lg shadow-md hover:bg-db-dark transition-colors">View Full Advisory Board</button>
             </div>
         </div>
     </section>
 
-    <!-- Affiliate Network CTA -->
-    <section id="affiliates" class="py-24 bg-db-dark text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="p-8 bg-db-green/70 rounded-2xl shadow-2xl border-4 border-db-gold">
-                <h2 class="text-4xl md:text-5xl font-serif text-db-gold mb-4">10,000+ Partners by Year 3. Your Network is Your Wealth.</h2>
-                <p class="text-2xl mb-8 text-db-sand font-light">
-                    Join the most ethical and lucrative real estate affiliate network in Africa. Superior compensation, guaranteed asset quality, and unparalleled support.
+    <!-- 6. Contact Section -->
+    <section id="contact" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-serif font-bold text-db-green text-center mb-12">Contact Our Advisory Team</h2>
+            
+            <div class="max-w-3xl mx-auto bg-db-sand p-8 rounded-xl shadow-2xl">
+                <p class="text-center text-lg text-db-dark mb-6">
+                    Ready to discuss your secure real estate investment? Fill out the form below.
                 </p>
-                <a href="#contact" class="inline-block px-12 py-4 text-xl font-black bg-db-gold text-db-dark rounded-xl shadow-2xl hover:bg-db-sand transition-all duration-300 transform hover:scale-105">
-                    Register as an Affiliate Partner →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-db-sand">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-serif text-center font-bold text-db-green mb-8">Schedule Your Secured Investment Consultation</h2>
-            
-            <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-db-gold">
-                <p class="text-center text-db-green font-semibold mb-6">Our team will reach out within 24 hours to schedule your private session.</p>
-                <form action="#" method="POST" class="space-y-6">
-                    <div>
-                        <input type="text" placeholder="Full Name (As per ID/Passport)" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-db-green focus:border-db-green">
-                    </div>
-                    <div>
-                        <input type="email" placeholder="Professional Email Address" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-db-green focus:border-db-green">
-                    </div>
-                    <div>
-                        <select class="w-full p-4 border border-gray-300 rounded-lg focus:ring-db-green focus:border-db-green">
-                            <option>Diaspora Investor (Seeking Secured Land/Property)</option>
-                            <option>Local Investor (Seeking Management Services)</option>
-                            <option>Prospective Affiliate Partner</option>
-                            <option>Institutional/Corporate Inquiry</option>
-                        </select>
-                    </div>
-                    <div>
-                        <textarea placeholder="Briefly state your investment goal and preferred contact time (GMT/WAT)" rows="5" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-db-green focus:border-db-green"></textarea>
-                    </div>
+                
+                <form id="contactForm" class="space-y-4">
+                    <input type="text" placeholder="Your Full Name" required class="w-full p-3 rounded-lg border-2 border-gray-300 focus:border-db-gold focus:ring-db-gold transition duration-200">
+                    <input type="email" placeholder="Email Address" required class="w-full p-3 rounded-lg border-2 border-gray-300 focus:border-db-gold focus:ring-db-gold transition duration-200">
+                    <input type="tel" placeholder="Phone Number (Optional)" class="w-full p-3 rounded-lg border-2 border-gray-300 focus:border-db-gold focus:ring-db-gold transition duration-200">
+                    <textarea placeholder="Your Inquiry (e.g., Land Banking, Property Management)" rows="4" required class="w-full p-3 rounded-lg border-2 border-gray-300 focus:border-db-gold focus:ring-db-gold transition duration-200"></textarea>
                     
-                    <button type="submit" class="w-full px-6 py-4 bg-db-green text-white font-bold text-lg rounded-xl shadow-lg hover:bg-db-dark transition-colors transform hover:scale-[1.01]">
-                        Send Consultation Request
+                    <button type="submit" class="w-full px-6 py-3 bg-db-green text-white font-extrabold rounded-lg shadow-lg transition duration-300 hover:bg-db-gold hover:text-db-dark transform hover:scale-[1.01]">
+                        Send Inquiry
                     </button>
+                    <div id="contactMessage" class="mt-4 text-center text-db-green font-semibold hidden">Thank you for your inquiry! We will contact you shortly.</div>
                 </form>
-            </div>
-            
-            <div class="mt-10 text-center text-md text-gray-600">
-                <p>CONTACT HOTLINE: <span class="text-db-green font-extrabold text-lg">+2348035879983</span> | <span class="text-db-green font-extrabold text-lg">@iam_os1</span></p>
-                <p class="mt-2 text-sm">Head Office: [Address Placeholder], Lagos, Nigeria</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-db-dark text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-4 font-semibold text-gray-300">
-                <a href="#about" class="hover:text-db-gold transition-colors">About D-BASILEUS</a>
-                <span class="text-db-gold hidden md:inline-block">|</span>
-                <a href="#" class="hover:text-db-gold transition-colors">Career Opportunities</a>
-                <span class="text-db-gold hidden md:inline-block">|</span>
-                <a href="#" class="hover:text-db-gold transition-colors">Legal & Compliance</a>
-                <span class="text-db-gold hidden md:inline-block">|</span>
-                <a href="#" class="hover:text-db-gold transition-colors">Privacy Policy</a>
-                <span class="text-db-gold hidden md:inline-block">|</span>
-                <a href="#" class="hover:text-db-gold transition-colors">Terms of Service</a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-6">
+                <a href="#about" class="hover:text-db-gold transition-colors">About</a>
+                <a href="#services" class="hover:text-db-gold transition-colors">Services</a>
+                <a href="#inventory" class="hover:text-db-gold transition-colors">Inventory</a>
+                <a href="#contact" class="hover:text-db-gold transition-colors">Contact</a>
+                <a href="[PASTE YOUR VERCEL AMS URL HERE]" target="_blank" class="hover:text-db-gold transition-colors font-bold">Affiliate Portal</a>
             </div>
-            <p class="mb-2 font-serif text-lg text-db-gold mt-4">D-BASILEUS PROPERTIES LTD</p>
-            <p class="text-gray-500">Building Wealth, Leading Networks & Ensuring Stewardship. | © 2025 All Rights Reserved. | Registered in Nigeria.</p>
+            
+            <div class="flex justify-center space-x-6 text-xl mb-6">
+                <a href="#" class="text-db-gold hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-db-gold hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-db-gold hover:text-white transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-db-gold hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <p class="text-sm text-gray-400">
+                &copy; 2025 D-BASILEUS PROPERTIES LTD. All Rights Reserved. <br>
+                Commitment to Leadership, Ethics, and Stewardship.
+            </p>
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu Functionality -->
     <script>
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-        document.querySelectorAll('#mobile-menu a').forEach(item => {
-            item.addEventListener('click', function() {
-                // Hides the menu after a link is clicked
-                document.getElementById('mobile-menu').classList.add('hidden');
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Simple Contact Form Submission (for static site)
+        const contactForm = document.getElementById('contactForm');
+        const contactMessage = document.getElementById('contactMessage');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send this data to a server here (e.g., Firestore, Email Service).
+            // Since this is a static HTML file, we simulate success:
+
+            // Clear the form fields
+            e.target.reset();
+
+            // Show success message
+            contactMessage.classList.remove('hidden');
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                contactMessage.classList.add('hidden');
+            }, 5000);
         });
     </script>
 </body>
